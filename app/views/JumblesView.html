@@ -1,0 +1,44 @@
+<section class="container">
+  <div class="row justify-content-around">
+    <div class="col-5">
+      <div id="jumble-view" class="row">
+
+      </div>
+      <div class="row">
+        <div class="col-12">
+
+          <div class="card">
+            <form onsubmit="app.JumblesController.CompareGame()">
+              <div>
+                <textarea type="text" name="body">TEST</textarea>
+              </div>
+              <div>
+                <button type="submit" class="w-100">SUBMIT</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 ">
+      <div class="card">
+        <div class="row">JUMBLES!</div>
+        <div class="row" id="challenges">USER CHALLENGES</div>
+
+        <div class="row">Create JUMBLE</div>
+        <form action="">
+          <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required minlength="1" maxlength="20">
+          </div>
+          <div>
+            <label for="jumble">Jumble</label>
+            <textarea type="text" name="jumble" id="jumble" required minlength="1"></textarea>
+          </div>
+          <div class="btn btn-primary w-100">create+</div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</section>
