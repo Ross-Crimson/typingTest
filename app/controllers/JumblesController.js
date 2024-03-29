@@ -6,9 +6,10 @@ import { setHTML } from "../utils/Writer.js"
 export class JumblesController {
   constructor() {
 
-    jumblesService.LoadJumbles()
     AppState.on('jumbles', this.drawJumbles)
-    this.drawJumbles()
+    AppState.on('activeJumble', this.drawJumblesView)
+    jumblesService.LoadJumbles()
+    //this.drawJumbles()
   }
 
   drawJumbles() {
@@ -31,6 +32,12 @@ export class JumblesController {
     let playerEntry = getFormData(event.target)
     jumblesService.CompareGame(playerEntry)
     this.drawJumbles()
+  }
+
+  CreateJumble() {
+    event.preventDefault()
+    const form = getFormData(event.target)
+    jumblesService.CreateJumble(form)
   }
 
 }
